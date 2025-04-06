@@ -243,3 +243,6 @@ run = 'layout floating'
 if.app-name-regex-substring = 'weather'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Cisco Secure Client'
+run = 'layout floating'
