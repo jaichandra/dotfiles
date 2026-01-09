@@ -9,12 +9,10 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [
-    'exec-and-forget borders active_color=0xFF1D4ED8 inactive_color=0x66494D64 width=5.0'
-]
+after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -110,6 +108,12 @@ outer.right =      0
 ctrl-cmd-b = 'exec-and-forget open -a "Google Chrome"'
 ctrl-cmd-s = 'exec-and-forget open -a Slack'
 ctrl-cmd-o = 'exec-and-forget open -a "Microsoft Outlook"'
+ctrl-cmd-t = 'exec-and-forget open -a "iTerm"'
+ctrl-cmd-v = 'exec-and-forget open -a "Visual Studio Code"'
+
+# move focus to another monitor
+alt-right = 'focus-monitor right'
+alt-left = 'focus-monitor left'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
@@ -248,3 +252,7 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-name-regex-substring = 'Cisco Secure Client'
 run = 'layout floating'
+
+[workspace-to-monitor-force-assignment]
+9 = 'secondary' # or use the monitor's name/ID
+
