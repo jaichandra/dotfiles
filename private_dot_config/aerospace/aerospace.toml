@@ -227,11 +227,18 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.window-title-regex-substring = 'zoom'
-run = ['layout tiling', 'move-node-to-workspace 8']
+run = ['layout tiling', 'move-node-to-workspace 9']
 
+# Rule 1: Catch all Outlook windows and tile them to Workspace 1
 [[on-window-detected]]
-if.app-name-regex-substring = 'Outlook'
+if.app-id = 'com.microsoft.Outlook'
 run = ['layout tiling', 'move-node-to-workspace 1']
+
+# Rule 2: Specifically catch 'Reminders' and float them
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+if.window-title-regex-substring = 'Reminder'
+run = 'layout floating'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'slack'
