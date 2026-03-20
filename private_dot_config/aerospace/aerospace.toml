@@ -227,7 +227,7 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.window-title-regex-substring = 'zoom'
-run = ['layout tiling', 'move-node-to-workspace 8']
+run = ['layout tiling', 'move-node-to-workspace 9']
 
 # Rule 1: Catch all Outlook windows and tile them to Workspace 1
 #[[on-window-detected]]
